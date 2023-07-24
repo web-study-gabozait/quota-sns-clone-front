@@ -43,3 +43,5 @@ next-env.d.ts
 !.yarn/versions
 .next
 .DS_Store
+
+.env

@@ -1,3 +1,4 @@
+import {LAYOUT_WIDTH} from "@/constants/layout/layout.constant";
 import {palette} from "@/styles/palette";
 import styled from "@emotion/styled";
 
@@ -5,5 +6,44 @@ export const Container = styled.nav`
   width: 100%;
   height: 60px;
   background-color: ${palette.main};
-  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Wrap = styled.div`
+  width: ${LAYOUT_WIDTH}px;
+  display: flex;
+  align-items: center;
+`;
+
+export const InnerWrap = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+`;
+
+export const Logo = styled.h1`
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  margin-right: 20px;
+`;
+
+export const WriteIcon = styled.div`
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const FriendIcon = styled.div`
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

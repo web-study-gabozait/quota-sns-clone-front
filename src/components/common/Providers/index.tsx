@@ -13,7 +13,8 @@ const Provider = ({children, pageProps}: ProvidersProps) => {
             retryOnMount: false,
             refetchOnWindowFocus: false,
             refetchOnReconnect: false,
-            staleTime: 1000,
+            cacheTime: Infinity,
+            staleTime: 0,
           },
         },
       })
