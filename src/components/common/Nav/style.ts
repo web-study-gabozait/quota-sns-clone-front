@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 export const Container = styled.nav`
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   background-color: ${palette.main};
   display: flex;
   align-items: center;

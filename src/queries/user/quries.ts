@@ -21,6 +21,9 @@ export const useGetMyUserQuery = (
           name: "test",
           email: "test@gmail.com",
           profile_image_url: null,
+          login_count: 1,
+          last_login_at: "2023-07-24",
+          create_at: "2023-07-23",
         };
       }
 
