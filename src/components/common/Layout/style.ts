@@ -3,10 +3,11 @@ import styled, {CSSObject} from "@emotion/styled";
 
 export const Container = styled.main<{customStyle?: CSSObject}>`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #e9eaed;
 
   ${({customStyle}) => customStyle};
 `;
@@ -16,4 +17,5 @@ export const Wrap = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 40px 0px;
 `;
