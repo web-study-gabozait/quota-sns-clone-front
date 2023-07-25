@@ -3,6 +3,7 @@ import {QUERY_KEY} from "../queryKey";
 import UserRepositoryImpl from "@/repositories/user/UserRepositoryImpl";
 import {GetMyUserResponse} from "@/repositories/user/UserRepository";
 import {AxiosError} from "axios";
+import {CONFIG} from "@/config";
 
 export const useGetMyUserQuery = (
   options?: UseQueryOptions<
@@ -12,6 +13,20 @@ export const useGetMyUserQuery = (
     [string]
   >
 ) =>
-  useQuery([QUERY_KEY.user.getMyUser], () => UserRepositoryImpl.getMyUser(), {
-    ...options,
-  });
+  useQuery(
+    [QUERY_KEY.user.getMyUser],
+    () => {
+      if (CONFIG.ENV === "development") {
+        return {
+          name: "test",
+          email: "test@gmail.com",
+          profile_image_url: null,
+        };
+      }
+
+      return UserRepositoryImpl.getMyUser();
+    },
+    {
+      ...options,
+    }
+  );

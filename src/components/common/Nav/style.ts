@@ -17,6 +17,13 @@ export const Wrap = styled.div`
   align-items: center;
 `;
 
+export const ItemsWrap = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const InnerWrap = styled.div`
   display: flex;
   align-items: center;
@@ -28,6 +35,8 @@ export const Logo = styled.h1`
   color: white;
   font-weight: bold;
   margin-right: 20px;
+  white-space: nowrap;
+  cursor: pointer;
 `;
 
 export const WriteIcon = styled.div`

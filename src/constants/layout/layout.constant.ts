@@ -1,1 +1,1 @@
-export const LAYOUT_WIDTH = 1366 as const;
+export const LAYOUT_WIDTH = 1024 as const;

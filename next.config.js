@@ -8,6 +8,9 @@ const ENV = {
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  compiler: {
+    emotion: true,
+  },
   publicRuntimeConfig: {...ENV},
 };
 

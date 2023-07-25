@@ -3,7 +3,7 @@ import * as S from "./style";
 
 const NavItem = ({onClick, children, customStyle}: NavItemProps) => {
   return (
-    <S.Container onClick={onClick} customStyle={customStyle}>
+    <S.Container onClick={() => onClick?.()} customStyle={customStyle}>
       {children}
     </S.Container>
   );
